@@ -1,1 +1,3 @@
 export const SET_USER_AVATAR = 'SET_USER_AVATAR';
+export const SET_TERMINAL = 'SET_TERMINAL';
+export const DELETE_TERMINAL = 'DELETE_TERMINAL';

@@ -18,7 +18,7 @@ const FormInput = ({ type, label, minLength, value, onChange, isInvalid }) => (
       className='form-control'
     />
 
-    <div className='text-danger small home-form__warning'>
+    <div className='text-danger small form-warning'>
       {isInvalid && `Invalid ${label}`}
     </div>
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import HomeContainer from './containers/pages/HomeContainer';
+import TerminalsPage from './components/pages/TerminalsPage';
 
 import { Switch, Route } from 'react-router-dom';
 
@@ -10,7 +11,7 @@ const App = () => {
     <div className="App">
       <Switch>
         <Route path='/terminals'>
-          <HomeContainer />
+          <TerminalsPage />
         </Route>
 
         <Route path='/buyers/:id'>
@@ -18,7 +19,7 @@ const App = () => {
         </Route>
 
         <Route path='/buyers'>
-          <HomeContainer />
+          <TerminalsPage />
         </Route>
         
         <Route path='/'>

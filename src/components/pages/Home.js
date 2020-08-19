@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
-import { getUserByLogin } from '../../js_modules/urls';
+import { getUserByLogin, terminals } from '../../js_modules/urls';
 import FormInput from '../form/FormInput';
 import '../../sass/Home.sass';
 import PropTypes from 'prop-types';
+import { useHistory } from 'react-router-dom';
 
-const HomePage = ({ setUserAvatar }) => {
+const Home = ({ setUserAvatar }) => {
 
   const [login, setLogin] = useState('daria-kostuchenko');
-  const [password, setPassword] = useState('');
+  const [password, setPassword] = useState('vmb345CCVB');
   const [loginWarning, setLoginWarning] = useState(false);
   const [passwordWarning, setPasswordWarning] = useState(false);
 
@@ -25,9 +26,9 @@ const HomePage = ({ setUserAvatar }) => {
 
       .then(response => {
         if (!response.ok) {
-          console.log('error', response)
           throw new Error("User doesn't exist")
         }
+
         return response.json();
       })
 
@@ -36,9 +37,13 @@ const HomePage = ({ setUserAvatar }) => {
 
   }
 
+  let history = useHistory();
+
   const submitUser = (userData) => {
-    console.log(userData);
+    //set avatar to redux store
     setUserAvatar(userData.avatar_url);
+
+    history.push(`/${terminals}`);
   }
 
   const formSubmitHandler = (e) => {
@@ -67,7 +72,7 @@ const HomePage = ({ setUserAvatar }) => {
       <FormInput
         type='password'
         label='Password'
-        minLength={3}
+        minLength={8}
         value={password}
         onChange={setPassword}
         isInvalid={passwordWarning}
@@ -78,8 +83,8 @@ const HomePage = ({ setUserAvatar }) => {
   )
 }
 
-HomePage.propTypes = {
+Home.propTypes = {
   setUserAvatar: PropTypes.func
 }
 
-export default HomePage;
+export default Home;
