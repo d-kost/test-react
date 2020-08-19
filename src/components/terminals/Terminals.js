@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 const Terminals = ({ terminals, addTerminal, deleteTerminal }) => {
 
   return (
-    <div className="col-9">
+    <div className="col-sm-9 col-12 ml-auto">
       <h2 className='text-center'>Terminals</h2>
 
       <TerminalForm addTerminal={addTerminal} />

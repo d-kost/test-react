@@ -5,7 +5,7 @@ import TerminalsContainer from '../../containers/TerminalsContainer';
 const TerminalsPage = () => {
 
   return (
-    <div className="container">
+    <div className="container-fluid">
       <div className='row'>
         <Sidebar />
         <TerminalsContainer />

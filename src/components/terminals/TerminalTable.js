@@ -10,7 +10,7 @@ const TerminalsTable = ({ terminals, deleteTerminal }) => {
     [deleteTerminal]);
 
   return (
-    <table className='table table-sm table-hover text-center'>
+    <table className='table table-responsive table-sm table-hover text-center'>
       <caption style={{ captionSide: 'top' }}>Список терминалов</caption>
       <thead>
         <tr>

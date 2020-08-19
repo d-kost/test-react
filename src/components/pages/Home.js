@@ -58,7 +58,7 @@ const Home = ({ setUserAvatar }) => {
   }
 
   return (
-    <form onSubmit={formSubmitHandler} className='home-form mx-auto border rounded p-3' >
+    <form onSubmit={formSubmitHandler} className='home-form mx-auto border rounded p-3 mt-3' >
 
       <FormInput
         type='text'
