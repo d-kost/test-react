@@ -1,7 +1,8 @@
 import React from 'react';
 import './App.css';
-import HomeContainer from './containers/pages/HomeContainer';
+import HomeContainer from './containers/HomeContainer';
 import TerminalsPage from './components/pages/TerminalsPage';
+import BuyersPage from './components/pages/BuyersPage';
 
 import { Switch, Route } from 'react-router-dom';
 
@@ -15,11 +16,11 @@ const App = () => {
         </Route>
 
         <Route path='/buyers/:id'>
-          <HomeContainer />
+          <TerminalsPage />
         </Route>
 
         <Route path='/buyers'>
-          <TerminalsPage />
+          <BuyersPage />
         </Route>
         
         <Route path='/'>

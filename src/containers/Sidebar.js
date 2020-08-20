@@ -24,7 +24,6 @@ const Sidebar = ({ userAvatarUrl }) => {
       >
         <div className='h-100 d-flex flex-column justify-content-between'>
 
-          {console.log('sidebar render')}
           <div>
             <img src={userAvatarUrl} alt='User Github Avatar' className='sidebar__avatar' />
           </div>
