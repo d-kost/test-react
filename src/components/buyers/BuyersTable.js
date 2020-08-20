@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 const BuyersTable = ({ buyers }) => {
 
@@ -21,7 +22,7 @@ const BuyersTable = ({ buyers }) => {
 
           {buyers.map(buyer => (
             <tr key={buyer.id}>
-              <td>{buyer.id}</td>
+              <td><Link to={`/buyers/${buyer.id}`}>{buyer.id}</Link></td>
               <td>{buyer.name}</td>
               <td>{buyer.averageCheck}</td>
               <td>{buyer.purchaseNumber}</td>

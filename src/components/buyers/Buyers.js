@@ -40,13 +40,23 @@ const Buyers = ({ buyers }) => {
     return filteredBuyers.slice(startIndex, startIndex + pageBuyersNumber);
   }
 
+  const changeBuyersNumber = (value) => {
+    setPageBuyersNumber(value);
+
+    if (value !== 5) {
+      setCurrentPage(0);
+    }
+    
+  }
+
+
   return (
     <div className="col-sm-9 col-12 ml-auto">
       <h2 className='text-center'>Покупатели</h2>
 
       <BuyersSettings
         buyersNumber={pageBuyersNumber}
-        buyersNumberChange={setPageBuyersNumber}
+        buyersNumberChange={changeBuyersNumber}
         buyersSorting={buyersSorting}
         buyersSortingChange={setBuyersSorting}
         buyersNameFilter={buyersNameFilter}

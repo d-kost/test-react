@@ -7,8 +7,8 @@ import { useHistory } from 'react-router-dom';
 
 const Home = ({ setUserAvatar }) => {
 
-  const [login, setLogin] = useState('daria-kostuchenko');
-  const [password, setPassword] = useState('vmb345CCVB');
+  const [login, setLogin] = useState('');
+  const [password, setPassword] = useState('');
   const [loginWarning, setLoginWarning] = useState(false);
   const [passwordWarning, setPasswordWarning] = useState(false);
 
