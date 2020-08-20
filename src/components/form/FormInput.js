@@ -13,7 +13,7 @@ const FormInput = ({ type, label, minLength, value, onChange, isInvalid }) => (
       type={type}
       value={value}
       minLength={minLength}
-      required
+      required={!!minLength}
       onChange={e => onChange(e.target.value)}
       className='form-control'
     />

@@ -12,6 +12,8 @@ const TerminalsForm = ({ addTerminal }) => {
 
     //add terminal to redux store
     addTerminal(name, description);
+    setName('');
+    setDescription('');
   }
 
   return (
@@ -29,7 +31,7 @@ const TerminalsForm = ({ addTerminal }) => {
       <FormInput
         type='text'
         label='Описание'
-        minLength={1}
+        minLength={0}
         value={description}
         onChange={setDescription}
         isInvalid={false}

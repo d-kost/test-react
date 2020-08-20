@@ -10,31 +10,33 @@ const TerminalsTable = ({ terminals, deleteTerminal }) => {
     [deleteTerminal]);
 
   return (
-    <table className='table table-responsive table-sm table-hover text-center'>
-      <caption style={{ captionSide: 'top' }}>Список терминалов</caption>
-      <thead>
-        <tr>
-          <th scope="col">Название</th>
-          <th scope="col">Описание</th>
-          <th scope="col">#</th>
-        </tr>
-      </thead>
+    <div className='table-responsive'>
+      <table className='table table-sm table-hover text-center'>
+        <caption style={{ captionSide: 'top' }}>Список терминалов</caption>
+        <thead>
+          <tr>
+            <th scope="col">Название</th>
+            <th scope="col">Описание</th>
+            <th scope="col">#</th>
+          </tr>
+        </thead>
 
-      <tbody>
+        <tbody>
 
-        {terminals.map(terminal => {
+          {terminals.map(terminal => {
 
-          return (
-            <TerminalsTableRow
-              key={terminal.id}
-              terminal={terminal}
-              deleteTerminal={deleteTerminalMemorized}
-            />
-          )
-        })}
-      </tbody>
+            return (
+              <TerminalsTableRow
+                key={terminal.id}
+                terminal={terminal}
+                deleteTerminal={deleteTerminalMemorized}
+              />
+            )
+          })}
+        </tbody>
 
-    </table>
+      </table>
+    </div>
   )
 }
 
